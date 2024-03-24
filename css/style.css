@@ -1,0 +1,807 @@
+@font-face {
+  font-family: typo ;
+  src: url(../fonts/HelveticaNeueLTStd-Lt.otf)
+  ;
+}
+
+
+body {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes flash {
+  0%, 100% {
+    color: #FF00FF;
+  }
+  25% {
+    color: #00FFFF;
+  }
+  50% {
+    color: #66FF00;
+  }
+  75% {
+    color: #FFFF00;
+  }
+}
+
+.cursor {
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  z-index: 10000;
+  height: 50px;
+  width:35px;
+  transition: all 200ms ease-out;
+  background-image: url(../img/valent2.png);
+  cursor: auto;
+
+}
+
+
+#thumb-projet1 {
+  position: absolute;
+  top: 10vh;
+  left: 3vw;
+  width: 50vw ;
+  height: 22vh  ;
+  background-image: url(../img/rowjay.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet1-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet2 {
+  position: absolute;
+  top: 36vh;
+  left: 12vw;
+  width: 25vw;
+  height: 25vh;
+  background-image: url(../img/lapin.gif);
+  mix-blend-mode: multiply;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+ 
+}
+
+#content-projet2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet2-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet3 {
+  position: absolute;
+  top: 25vh;
+  left: 43vw;
+  width: 33vh;
+  height: 5vw;
+  background-image: url(../img/v1closeup.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content-projet3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet3-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet4 {
+  position: absolute;
+  top: 77vh;
+  left: 29vw;
+  width: 21vw;
+  height: 10vh;
+  background-image: url(../img/nostalgia_ultra.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet4-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet5 {
+  position: absolute;
+  top: 77vh;
+  left: 52vw;
+  width: 25vw;
+  height: 17vh;
+  background-image: url(../img/cascade.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet5-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet6 {
+  position: absolute;
+  top: 35vh;
+  left: 28vw;
+  width: 21vw;
+  height: 21vh;
+  background-image: url(../img/avion_vert.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet6-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet7 {
+  position: absolute;
+  top: 10vh;
+  left: 76vw;
+  width: 17vw;
+  height: 44vh;
+  background-image: url(../img/manulouis.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet7-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet8 {
+  position: absolute;
+  top: 34vh;
+  left: 68vw;
+  width: 21vw;
+  height: 47vh;
+  background-image: url(../img/jpo.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet8-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet9 {
+  position: absolute;
+  top: 11vh;
+  left: 50vw;
+  width: 21vw;
+  height: 33vh;
+  background-image: url(../img/gifpotager.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet9-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet10 {
+  position: absolute;
+  top: 61vh;
+  left: 10vw;
+  width: 15vw;
+  height: 33vh;
+  background-image: url(../img/rendu2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet10-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet11 {
+  position: absolute;
+  top: 39vh;
+  left: 49vw;
+  width: 17vw;
+  height: 28vh;
+  background-image: url(../img/luther.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet11-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#thumb-projet12 {
+  position: absolute;
+  top: 53vh;
+  left: 33vw;
+  width: 17vw;
+  height: 28vh;
+  background-image: url(../img/perrine.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+
+#content-projet12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  font-size: xx-large;
+  color: blue;
+}
+
+#thumb-projet12-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+}
+
+#charbon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95vw;
+  height: 95vh;
+  background-image: url(../img/gif_charbon.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: typo;
+  font-size: 12vw;
+  margin: 0.694vw;
+  text-align: left;
+  white-space: nowrap;
+  }
+
+  h7 {
+    font-family: typo;
+    font-size: 3vw;
+    text-align: left;
+  }
+
+#about {
+    padding: 2vw;
+  }
+
+#bio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  text-decoration: none;
+  line-height: 12vh;
+}
+
+a {
+  color: rgb(227, 227, 227); /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  transition: color 0.4s;
+}
+
+
+
+
+h4 :hover {
+  color: black;
+}
+
+
+#medium :hover {
+  color: black;
+}
+
+#medium::first-letter {
+  font-size: 8vw;
+}
+
+h3::first-letter{
+  font-size: 8vw;
+}
+
+h3 :hover{
+  color:black;
+}
+
+h4::first-letter {
+  font-size: 8vw;
+}
+
+h5::first-letter {
+  font-size: 8vw;
+}
+
+h6::first-letter {
+  font-size: 8vw;
+}
+
+h5 :hover{
+    /* color: black; */
+    animation: flash 0.3s infinite alternate;
+}
+
+
+h6:hover {
+    color: black;
+}
+
+
+
+
+/* This is a stylization for a certain example, you can stylize it for your own layout */ 
+.fonte {
+  position: relative;
+  width: 25vh;
+  top: 10vh;
+  left: 5.5vh;
+  transform: rotate(-30deg);
+}
+.fonte .sticker1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hiding the second picture right away */
+.fonte .sticker1:nth-of-type(2) {
+  display: none;
+}
+
+/* When you hover your cursor over the parent change-photos class, the first picture is hidden, and the second is shown */
+
+.fonte:hover .sticker1:nth-of-type(1) {
+  display: none;
+}
+
+.fonte:hover .sticker1:nth-of-type(2) {
+  display: block;
+}
+
+.fonte:hover {
+  cursor: pointer;
+}
+
+/* This is a stylization for a certain example, you can stylize it for your own layout */ 
+.open {
+  position: relative;
+  width: 24.4vh;
+  top: 45vh;
+  left: 93vh;
+  transform: rotate(30deg);
+}
+.open .sticker2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hiding the second picture right away */
+.open .sticker2:nth-of-type(2) {
+  display: none;
+}
+
+/* When you hover your cursor over the parent change-photos class, the first picture is hidden, and the second is shown */
+
+.open:hover .sticker2:nth-of-type(1) {
+  display: none;
+}
+
+.open:hover .sticker2:nth-of-type(2) {
+  display: block;
+}
+
+.open:hover {
+  cursor: pointer;
+}
+
+/* This is a stylization for a certain example, you can stylize it for your own layout */ 
+.support {
+  position: relative;
+  width: 27.7vh;
+  top: 55.5vh;
+  left: 55.5vh;
+  transform: rotate(-15deg);
+}
+.support .sticker3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hiding the second picture right away */
+.support .sticker3:nth-of-type(2) {
+  display: none;
+}
+
+/* When you hover your cursor over the parent change-photos class, the first picture is hidden, and the second is shown */
+
+.support:hover .sticker3:nth-of-type(1) {
+  display: none;
+}
+
+.support:hover .sticker3:nth-of-type(2) {
+  display: block;
+}
+
+.support:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+/* SMARTPHONE MODE PORTRAIT */
+@media screen and (orientation: portrait) {
+
+
+#images{
+  padding-left: 5vh;
+  padding-right: 5vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#thumb-projet1,
+#thumb-projet2,
+#thumb-projet3,
+#thumb-projet4,
+#thumb-projet5,
+#thumb-projet6,
+#thumb-projet8,
+#thumb-projet7{
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  display: block;
+  margin-bottom: 5vh;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100vw;
+  pointer-events: none;
+}
+
+
+
+
+body{
+  overflow-y:visible;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+  #content-projet1,
+  #content-projet2,
+  #content-projet3,
+  #content-projet4,
+  #content-projet5,
+  #content-projet6,
+  #content-projet7,
+  #content-projet8 {
+    display: none
+  }
+
+  #thumb-projet1-bg,
+  #thumb-projet2-bg,
+  #thumb-projet3-bg,
+  #thumb-projet4-bg,
+  #thumb-projet5-bg,
+  #thumb-projet6-bg,
+  #thumb-projet7-bg,
+  #thumb-projet8-bg {
+    display: none
+  }
+
+
+
+ 
+  
+  h1,h2,h3,h4,h5 {
+    font-family: typo;
+    font-size: 8vw;
+    margin: 0.694vw;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 4vh;
+  }
+
+  #charbon {
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/gif_charbon.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+  }
+
+  /* h6{
+    display: none;
+  } */
+
+  
+
+}
